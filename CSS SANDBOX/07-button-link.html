@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button & Link</title>
+    <style>
+      /* Normal Link */
+      a:link {
+        color: red;
+        text-decoration: none;
+      }
+
+      /* Visited Link */
+      a:visited {
+        color: blue;
+      }
+
+      /* Hovered Link */
+      a:hover {
+        color: purple;
+      }
+
+      /* Active Link */
+      a:active {
+        color: yellow;
+      }
+
+      /* Button Link Styling */
+      .button-link {
+        display: inline-block;
+        padding: 10px 20px;
+        color: white;
+        background-color: #007bff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .button-link:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.example.com">Visit Example</a>
+
+    <br />
+    <br />
+    <!-- Styling button link -->
+    <a href="#" class="button-link">Click Me</a>
+  </body>
+</html>

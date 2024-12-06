@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(
+    to bottom right,
+    rgba(34, 193, 195, 0.8),
+    rgba(253, 187, 45, 0.9)
+  );
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+.logo-text {
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.logo-text {
+  color: #fdba2d;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.header .header-right {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: rgb(34, 193, 195);
+  gap: 20px;
+}
+
+.header-right a {
+  font-size: 24px;
+  font-weight: 400;
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+.header-right a:hover {
+  color: #fdba2d;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.main-content form {
+  width: 100%;
+}
+
+.text-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.text-container h1 {
+  color: #34c7c9;
+  font-size: 40px;
+}
+
+.text-container p {
+  font-size: 18px;
+}
+
+/* Form */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fdba2d;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+  outline: 0;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #fdba2d;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Button */
+.btn {
+  display: block;
+  padding: 14px 20px;
+  border-radius: 25px;
+  border: none;
+  width: 100%;
+  background-color: #fdba2d;
+  color: #121212;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #fdd45e;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 10px;
+  }
+
+  .main-content h1 {
+    font-size: 32px;
+  }
+
+  .main-content form {
+    width: 100%;
+  }
+}

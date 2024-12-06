@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Shadow</title>
+    <style>
+      .box-1 {
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+        box-shadow: 5px 5px 10px gray;
+        /* 5px (horizontal offset- No horizontal shift) */
+        /* 5px (vertical offst- Moves the shadow 4px down) */
+        /* 10px {blur radius- adds a blur effect} */
+        /* gray(color- a gray shadow) */
+      }
+      .box-2 {
+        width: 200px;
+        height: 100px;
+        background-color: lightcoral;
+        box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.3);
+        /* 0 (horizontal offset- No horizontal shift) */
+        /* 4px (vertical offst- Moves the shadow 4px down) */
+        /* 10px {blur radius- adds a blur effect} */
+        /* 5px (spread radius- Expands the size of the shadow) */
+        /* rgba(0,0,0,0.3)(color- a semi-transparent black shadow) */
+      }
+      .box-3 {
+        width: 200px;
+        height: 100px;
+        background-color: lightgreen;
+        box-shadow: inset 0 0 10px #000;
+        /* inset: (changes the shadow to an inner shadow) */
+        /* 0 0 horinzontal and vertical offset: keeps the shadow centered */
+        /* 10px {blur radius- adds a blur effect} */
+        /* #000(color): the shadow color is black */
+      }
+
+      .box-4 {
+        width: 200px;
+        height: 100px;
+        background-color: lightyellow;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5),
+          -2px -2px 5px rgba(255, 255, 255, 0.5);
+        /* First shadow (bottom-right dark shadow) */
+        /* Second shadow (top-left light shadow) */
+      }
+
+      .box-5 {
+        width: 200px;
+        height: 100px;
+        background-color: #333;
+        box-shadow: 0 0 15px 10px rgba(0, 255, 0, 0.6);
+        /* 0 0 (no offset)- the shadow is directly behind the element */
+        /* 15px (blur radius) add a soft glow effect
+        10px (spread radius) expands the glow size 
+        rgba a bright green, semi-transparent color*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-1"></div>
+    <br /><br />
+    <div class="box-2"></div>
+    <br /><br />
+    <div class="box-3"></div>
+    <br /><br />
+    <div class="box-4"></div>
+    <br /><br />
+    <div class="box-5"></div>
+  </body>
+</html>

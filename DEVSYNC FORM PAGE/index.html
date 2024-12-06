@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devsync Form Page</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <a href="index.html">
+          <h2 class="logo-text">DevSync</h2>
+        </a>
+        <nav class="header-right">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Contact</a></li>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <div class="text-container">
+          <h1>Join the Future of Development</h1>
+          <p>
+            Be the first to experience Devsync, the app designed to streamline
+            collaboration and enhance productivity, sign up for early acccess
+            and stay ahead of the curve.
+          </p>
+        </div>
+
+        <form>
+          <h2>Get Early Access</h2>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Enter your phone number"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="role">Your Role (Optional)</label>
+            <input
+              type="text"
+              name="role"
+              id="role"
+              placeholder="e.g., Developer, Designer"
+            />
+          </div>
+          <div class="form-group">
+            <label for="source">How did you hear about us?</label>
+            <select name="source" id="source">
+              <option value="">Select an option</option>
+              <option value="social-media">Social Media</option>
+              <option value="friend">Friend</option>
+              <option value="newsletter">Newsletter</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="feedback">Feedback Message</label>
+            <textarea
+              name="feedback"
+              id="feedback"
+              placeholder="Share yoour thoughts"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn">Request Access</button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>

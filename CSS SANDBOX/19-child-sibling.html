@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Child Sibling Combinator</title>
+    <style>
+      /* Child Combinator: selects direct children of an element and doesn't select descendants down the hierachy */
+      .parent > .child {
+        color: blue;
+      }
+
+      h1 + p {
+        color: red;
+      }
+
+      .ancestor .descendant {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Child Combinator -->
+    <div class="parent">
+      <div class="child">Direct Child</div>
+      <div>
+        <div class="child">Nested Child</div>
+      </div>
+    </div>
+
+    <!-- Adjacent Sibling Combinator + selects an element that is immediately next to another specified element -->
+    <h1>heading</h1>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+
+    <!-- Descendant Selector (No combinator) -->
+    <div class="ancestor">
+      <div class="descendant">Grandchild</div>
+    </div>
+  </body>
+</html>

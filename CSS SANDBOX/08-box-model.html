@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model / Margin & Padding</title>
+    <style>
+      /* CSS Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .box {
+        background: #f4f4f4;
+        border: 2px #777 solid;
+        width: 500px;
+        /* Padding on all sides */
+        padding: 20px;
+        /* Madding per side */
+        margin: 10px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        /* Margin shorthand = top, right, bottom, left */
+        margin: 10px, 20px, 10px, 20px;
+
+        /* Margin shorthand = top/bottom left/right */
+        margin: 10px 20px;
+
+        /* Margin on all sides */
+        margin: 20px;
+      }
+
+      /* Padding on all sides */
+      /* .content-box {
+        width: 200px;
+        padding: 20px;
+        border: 5px solid #3498db;
+        background-color: #f0f0f0;
+      }
+      .border-box {
+        width: 200px;
+        padding: 20px;
+        border: 5px solid #3498db;
+        background-color: #f0f0f0;
+        box-sizing: border-box;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h3>Box One</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate
+        alias facere, incidunt laborum sint est veritatis dolores aut maxime
+        quaerat nobis, quae eligendi sapiente voluptate asperiores molestiae
+        corporis quo impedit.
+      </p>
+    </div>
+    <div class="box">
+      <h3>Box One</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate
+        alias facere, incidunt laborum sint est veritatis dolores aut maxime
+        quaerat nobis, quae eligendi sapiente voluptate asperiores molestiae
+        corporis quo impedit.
+      </p>
+    </div>
+
+    <!-- <div class="content-box">Content Box</div>
+    <div class="border-box">Border Box</div> -->
+  </body>
+</html>

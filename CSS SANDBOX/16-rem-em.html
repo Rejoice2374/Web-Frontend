@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rem & Em</title>
+    <style>
+      /* Root font-size affects rem */
+      html {
+        font-size: 16px;
+      }
+
+      /* Body uses rem */
+      body {
+        font-size: 1rem;
+        /* 16px */
+      }
+
+      /* Parent container */
+      .container {
+        font-size: 1.25rem;
+        /* 20px */
+      }
+
+      .container .child {
+        font-size: 1.5em;
+        /* 1.5 x 20px = 30px */
+        padding: 1em;
+      }
+
+      /* Remxample */
+      .container .child-2 {
+        font-size: 1.5rem;
+        margin: 2.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="child">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+          minus ipsam, cumque quasi quod nulla?
+        </p>
+      </div>
+      <div class="child-2">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+          minus ipsam, cumque quasi quod nulla?
+        </p>
+      </div>
+    </div>
+
+    <!-- Em is based on the fontsize of the element immediate parent or relative to the parent element fontsize -->
+
+    <!-- Rem is based on the font-size of the root element or relative to the element font size -->
+  </body>
+</html>

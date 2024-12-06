@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Element</title>
+    <style>
+      /* Style first letter */
+      p::first-letter {
+        font-size: 2rem;
+        font-weight: bold;
+        color: blue;
+      }
+
+      /* Style first line */
+      p::first-line {
+        text-transform: uppercase;
+        color: green;
+      }
+
+      /* Selection */
+      p::selection {
+        color: red;
+        background: yellow;
+      }
+
+      /* Placeholder */
+      input::placeholder {
+        color: grey;
+        font-style: italic;
+      }
+
+      input::file-selector-button {
+        font-weight: bold;
+        color: dodgerblue;
+        background-color: #fff;
+        padding-left: 0.5rem;
+        border: thin solid gray;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      li::marker {
+        content: "🔥";
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat itaque
+      numquam deserunt consectetur, distinctio doloremque!
+    </p>
+    <input type="text" placeholder="Enter your text" />
+    <br /><br />
+    <input type="file" />
+    <br /><br />
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </body>
+</html>

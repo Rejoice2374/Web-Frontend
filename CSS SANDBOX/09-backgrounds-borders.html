@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backgrounds & Borders</title>
+    <style>
+      .box-1 {
+        background-color: cyan;
+        /* border-width: 3px;
+        border-style: solid;
+        border-color: red; */
+
+        border: 3px solid red;
+        border-radius: 5px;
+      }
+
+      .box-2 {
+        background: #333;
+        color: #fff;
+        border-top: 3px solid blue;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .box-3 {
+        /* background-image: url(image/background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; */
+
+        /* background-shorthand */
+        background: #3498db url(image/background.jpg) no-repeat center
+          center/cover;
+      }
+
+      .box-4 {
+        /* background: linear-gradient(to right, red, yellow); */
+        /* background: linear-gradient(45deg, red, yellow); */
+        background: radial-gradient(circle, red, yellow);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-1">
+      <h3>Box One</h3>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+        explicabo quos? Consequatur porro soluta animi?
+      </p>
+    </div>
+    <div class="box-2">
+      <h3>Box Two</h3>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+        explicabo quos? Consequatur porro soluta animi?
+      </p>
+    </div>
+    <div class="box-3">
+      <h3>Box Three</h3>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+        explicabo quos? Consequatur porro soluta animi?
+      </p>
+    </div>
+    <div class="box-4">
+      <h3>Box Four</h3>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+        explicabo quos? Consequatur porro soluta animi?
+      </p>
+    </div>
+  </body>
+</html>
