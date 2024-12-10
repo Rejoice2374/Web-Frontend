@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .square1 {
+        width: 100px;
+        height: 100px;
+        background-color: #f00;
+        transition: 2s;
+      }
+
+      .square1:hover {
+        background-color: #00f;
+        width: 200px;
+        height: 200px;
+        transform: rotate3d(60deg);
+      }
+
+      .square2 {
+        width: 100px;
+        height: 100px;
+        background-color: #0f0;
+        transition: 2s;
+      }
+
+      .square2:hover {
+        width: 1200px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- CSS Transitions and Animations in simple terms, are motion effect on elements.
+        HOW TO USE CSS TRANSITIONS
+        To create a transition effect, you should specify two things:
+            - the CSS transition properties you want to add an effect to and
+            - the duration of the effect.
+        Pls Note, the transition will have no effect, if the duration part is not specified.
+     
+        HOW TO USE ANIMATIONS
+         - Specify the animation using:
+         @keyframes nameOfAnimation {
+            cssProperty:value;
+            cssProperty:value;
+            cssProperty:value;
+         }
+
+         - Set the animation properties you wish.
+         Note the animation name must be specified.
+     -->
+    <div class="square1">1</div>
+    <div class="square2">2</div>
+    <div class="square3">3</div>
+  </body>
+</html>
