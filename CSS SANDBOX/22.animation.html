@@ -16,18 +16,128 @@
         background-color: #00f;
         width: 200px;
         height: 200px;
-        transform: rotate3d(60deg);
+        transform: rotate(360deg);
       }
 
       .square2 {
         width: 100px;
         height: 100px;
         background-color: #0f0;
-        transition: 2s;
+        margin-top: 20px;
+        transition-property: width;
+        transition-duration: 2s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 1s;
+        /* transition: width 2s ease-in-out 1s; */
+
+        /* for safari browsers */
+        --webkit-transition-property: width;
+        --webkit-transition-duration: 2s;
+        --webkit-transition-timing-function: ease-in-out;
+        --webkit-transition-delay: 1s;
+        /* --webkit-transition: width 2s ease-in-out 1s; */
       }
 
       .square2:hover {
-        width: 1200px;
+        width: 100%;
+      }
+
+      .greeting {
+        font-family: cursive;
+        color: #f00;
+        text-align: center;
+        animation: text-movement 1s;
+      }
+
+      @keyframes text-movement {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .greeting2 {
+        font-family: cursive;
+        color: #f00;
+        text-align: center;
+        animation: text-movement1 1s;
+      }
+
+      @keyframes text-movement1 {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .square3 {
+        width: 100px;
+        height: 100px;
+        background-color: #ff0;
+        animation: movebox 2s infinite 2s alternate;
+      }
+
+      @keyframes movebox {
+        0% {
+          transform: translate(0%, 0%);
+        }
+        25% {
+          transform: translate(100%, 0%);
+        }
+        50% {
+          transform: translate(100%, 100%);
+        }
+        75% {
+          transform: translate(0%, 100%);
+        }
+        100% {
+          transform: translate(0%, 0%);
+        }
+      }
+
+      img {
+        width: 100px;
+        animation: react 1s infinite 2s;
+      }
+
+      @keyframes react {
+        0% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .servicesContainer {
+        height: 40px;
+        overflow: hidden;
+      }
+
+      .servicesWrap {
+        height: 100%;
+        animation: scroll 3s infinite;
+      }
+
+      .services {
+        font-size: 30px;
+        height: 40px;
+      }
+
+      @keyframes scroll {
+        25% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-40px);
+        }
+        75% {
+          transform: translateY(-80px);
+        }
+        100% {
+          transform: translateY(-120px);
+        }
       }
     </style>
   </head>
@@ -52,6 +162,22 @@
      -->
     <div class="square1">1</div>
     <div class="square2">2</div>
-    <div class="square3">3</div>
+    <div class="square3"></div>
+
+    <h2 class="greeting">Merry Christmas & Happy New Year</h2>
+    <h2 class="greeting2">Merry Christmas & Happy New Year</h2>
+
+    <img src="react.png" alt="react" />
+
+    <h1>Welcome to Rejoice Telecoms</h1>
+    <h3>What we do:</h3>
+    <div class="servicesContainer">
+      <div class="servicesWrap">
+        <div class="services">Web design and development</div>
+        <div class="services">Mobile App development</div>
+        <div class="services">Spot Investment</div>
+        <div class="services">Ticket sales for shows</div>
+      </div>
+    </div>
   </body>
 </html>

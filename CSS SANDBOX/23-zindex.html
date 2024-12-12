@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zindex</title>
+    <style>
+      div {
+        width: 300px;
+        height: 150px;
+      }
+      .blue {
+        background-color: blue;
+        position: relative;
+        z-index: 1;
+      }
+      .red {
+        background-color: red;
+        position: absolute;
+        left: 10%;
+        top: 30%;
+        z-index: 3;
+      }
+      .yellow {
+        background-color: yellow;
+        position: absolute;
+        left: 20%;
+        top: 40%;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>About Z-index property</h1>
+    <p>
+      The z-index property specifies the stack order of an element. An elemnet
+      with greater stack order is always in front of an element with a lower
+      stack order
+    </p>
+
+    <div class="blue"></div>
+    <div class="red"></div>
+    <div class="yellow"></div>
+  </body>
+</html>
