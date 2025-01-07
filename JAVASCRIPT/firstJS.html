@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <!-- 
+    Javascript is a client-sided scripting language
+    It is used to program web pages
+    Javascript is usually embedded in html pages
+    Javascript is case sensitive
+    It was invented by Brendah Eich
+    
+    Javascript can displlay data in the following ways:
+    1. inside an HTML element using .innerHTML
+    2. inside an HTML page using document.write();
+    3. inside a pop-up window such as alert(); or prompt();
+    4. inside the browser's console using console.log();
+    
+    Note, Javascript can also be written in a seperate file and linked to an html ppage as form of external Javascript.
+    
+    Also to add or embed javascript program into a webpage, place it inside a script tag - <script> </script>
+    The script tag can be placed either in the head section or body section of your html page.
+    -->
+    <!-- Getting started with DOM manipulations
+     DOM manipulation allows developers to interact with and modify the structure, style, and content of web pages. -->
+
+    <h2>Javascript can change HTML element</h2>
+    <p id="change">Heads up! Javascript will change this text soon</p>
+    <button
+      type="button"
+      onClick="document.getElementById('change').innerHTML='Javascript changed this text'"
+      ondblclick="document.getElementById('change').innerHTML='Heads up! Javascript will change this text soon'"
+    >
+      Click to change text
+    </button>
+
+    <h2>Javascript can change HTML element</h2>
+    <img
+      src="Manchester United.png"
+      alt=""
+      style="width: 80px"
+      id="image"
+      onmouseover="document.getElementById('image').src='Arsenal.png'"
+      onmouseout="document.getElementById('image').src='Manchester United.png'"
+    />
+  </body>
+</html>
