@@ -27,6 +27,7 @@
     <!-- Getting started with DOM manipulations
      DOM manipulation allows developers to interact with and modify the structure, style, and content of web pages. -->
 
+    <!-- inline Javascript -->
     <h2>Javascript can change HTML element</h2>
     <p id="change">Heads up! Javascript will change this text soon</p>
     <button
@@ -46,5 +47,41 @@
       onmouseover="document.getElementById('image').src='Arsenal.png'"
       onmouseout="document.getElementById('image').src='Manchester United.png'"
     />
+
+    <h2>Javascript can change styles on element</h2>
+    <p id="style">Javascript can change the font size and color of this text</p>
+    <button onclick="document.getElementById('style').style.fontSize='30px'">
+      Change Size
+    </button>
+    <button onclick="document.getElementById('style').style.color='red'">
+      Change Color
+    </button>
   </body>
+
+  <h2>Javascript can hide or show element</h2>
+  <p id="view" style="display: none">APPEAR!!!</p>
+  <button
+    id="btn"
+    onclick="document.getElementById('view').style.display='block', document.getElementById('btn').innerText='Hide'"
+    ondblclick="document.getElementById('view').style.display='none', document.getElementById('btn').innerText='Show'"
+  >
+    Show
+  </button>
+
+  <p id="tosin"></p>
+
+  <button id="rejoice">Click to see a message pop up</button>
+  <br />
+
+  <!-- Embedded javascript: script codes here -->
+  <script>
+    document.write("Hello World");
+    document.getElementById("tosin").innerHTML = "<b>Tosin is a boy</b>";
+    // alert("This is an alert message");
+    // prompt("What is your name?");
+    var message = document.getElementById("rejoice");
+    message.addEventListener("click", function () {
+      alert("Rejoice is a blilionaire in Dollars");
+    });
+  </script>
 </html>
