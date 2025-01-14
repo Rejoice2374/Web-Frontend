@@ -1,0 +1,95 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(to right, #282bd6, #41c3e4);
+  font-family: "Raleway", sans-serif;
+  height: 100vh;
+}
+.welcome-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background: #f5f5f5;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  line-height: 1.8;
+}
+
+.welcome-form h2 {
+  font-size: 24px;
+  color: #000000;
+}
+
+.welcome-form p {
+  width: 340px;
+  font-size: 16px;
+  color: #535151;
+}
+
+.form-element {
+  margin: 15px 0px;
+}
+
+.form-element label {
+  font-size: 14px;
+  color: #222;
+}
+
+.form-element input[type="text"],
+.form-element input[type="number"] {
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.form-element button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #222;
+  color: #f5f5f5;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.grade {
+  /* display: none; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background: #f5f5f5;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  line-height: 1.8;
+}
+
+.grade .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  background: #888;
+  color: #eee;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
