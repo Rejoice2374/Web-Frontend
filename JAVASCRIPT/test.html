@@ -16,33 +16,40 @@
     </div>
 
     <script>
-      var student = document.getElementById("score").value;
-      var student_score = parseInt(student);
+      document
+        .getElementById("submitBtn")
+        .addEventListener("click", function () {
+          var student = document.getElementById("scoreee").value;
+          var student_score = parseInt(student);
 
-      const grade = document.getElementById("grad");
+          const grade = document.getElementById("grad");
 
-      if (student_score >= 70 && student_score <= 100) {
-        grade.innerHTML =
-          "With your score of" +
-          student_score +
-          "You got an A, You are an Idolo";
-      } else if (student_score < 70 && student_score >= 60) {
-        grade.innerHTML = "With your score of" + student_score + "You got a B";
-      } else if (student_score < 60 && student_score >= 50) {
-        grade.innerHTML = "With your score of" + student_score + "You got a C";
-      } else if (student_score < 50 && student_score >= 45) {
-        grade.innerHTML = "With your score of" + student_score + "You got a D";
-      } else if (student_score < 45 && student_score >= 40) {
-        grade.innerHTML = "With your score of" + student_score + "You got a E";
-      } else if (student_score < 40 && student_score >= 0) {
-        grade.innerHTML =
-          "With your score of" +
-          student_score +
-          "You got a F, You are an Odolo";
-      } else {
-        grade.innerHTML =
-          "With your score of" + student_score + "Invalid Entry";
-      }
+          if (student_score >= 70 && student_score <= 100) {
+            grade.innerHTML =
+              "With your score of" +
+              student_score +
+              "You got an A, You are an Idolo";
+          } else if (student_score < 70 && student_score >= 60) {
+            grade.innerHTML =
+              "With your score of" + student_score + "You got a B";
+          } else if (student_score < 60 && student_score >= 50) {
+            grade.innerHTML =
+              "With your score of" + student_score + "You got a C";
+          } else if (student_score < 50 && student_score >= 45) {
+            grade.innerHTML =
+              "With your score of" + student_score + "You got a D";
+          } else if (student_score < 45 && student_score >= 40) {
+            grade.innerHTML =
+              "With your score of" + student_score + "You got a E";
+          } else if (student_score < 40 && student_score >= 0) {
+            grade.innerHTML =
+              "With your score of" +
+              student_score +
+              "You got a F, You are an Odolo";
+          } else if (student_score < 0 || student_score > 100) {
+            grade.innerHTML = "Invalid Entry";
+          }
+        });
     </script>
   </body>
 </html>

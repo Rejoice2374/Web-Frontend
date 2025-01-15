@@ -82,27 +82,64 @@ if (visitor_age < 18) {
 // Adding event listener for the button
 document.getElementById("checker").addEventListener("click", function () {
   // Getting the value of the input when button is clicked
+  var studentName = document.getElementById("name").value;
+  var courseName = document.getElementById("course").value;
   var student = document.getElementById("scoreee").value;
   var student_score = parseInt(student);
 
   const grade = document.getElementById("grad");
 
-  if (isNaN(student_score) || student_score < 0) {
-    grade.innerHTML = "Invalid Entry. Please enter a valid score.";
+  if (student_score > 100 || student_score < 0) {
+    grade.innerHTML =
+      studentName + " Invalid Entry. Please enter a valid score.";
   } else if (student_score >= 70 && student_score <= 100) {
     grade.innerHTML =
-      "With your score of " + student_score + " you got an A, You are an Idolo";
+      studentName +
+      " with your score of " +
+      student_score +
+      " in " +
+      courseName +
+      " you got an A, You are an Idolo";
   } else if (student_score < 70 && student_score >= 60) {
-    grade.innerHTML = "With your score of " + student_score + " you got a B";
+    grade.innerHTML =
+      studentName +
+      " with your score of " +
+      student_score +
+      " in " +
+      courseName +
+      " you got a B";
   } else if (student_score < 60 && student_score >= 50) {
-    grade.innerHTML = "With your score of " + student_score + " you got a C";
+    grade.innerHTML =
+      studentName +
+      " with your score of " +
+      student_score +
+      " in " +
+      courseName +
+      " you got a C";
   } else if (student_score < 50 && student_score >= 45) {
-    grade.innerHTML = "With your score of " + student_score + " you got a D";
+    grade.innerHTML =
+      studentName +
+      " with your score of " +
+      student_score +
+      " in " +
+      courseName +
+      " you got a D";
   } else if (student_score < 45 && student_score >= 40) {
-    grade.innerHTML = "With your score of " + student_score + " you got an E";
+    grade.innerHTML =
+      studentName +
+      " with your score of " +
+      student_score +
+      " in " +
+      courseName +
+      " you got an E";
   } else if (student_score < 40 && student_score >= 0) {
     grade.innerHTML =
-      "With your score of " + student_score + " you got an F, You are an Odolo";
+      studentName +
+      " with your score of " +
+      student_score +
+      " in " +
+      courseName +
+      " you got an F, You are an Odolo";
   }
 });
 
