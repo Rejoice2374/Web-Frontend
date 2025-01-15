@@ -1,13 +1,13 @@
 //Create a program that greets a user
-var user = prompt("What is your name?");
+// var user = prompt("What is your name?");
 
 //Telling a user his Age in 10 years
-var age = prompt("What is your age?");
-var newAge = parseInt(age);
+// var age = prompt("What is your age?");
+// var newAge = parseInt(age);
 
 //Switch & Case
+/*
 const day = prompt("Time to wake each day, Enter a day:");
-
 switch (day) {
   case "sunday":
     console.log("It's sunday, Time to wake is 7am");
@@ -16,14 +16,13 @@ switch (day) {
   case "tuesday":
   case "wednesday":
   case "thursday":
-  case "friday":
     console.log("It's workday, Time to wake is 5am");
     break;
   case "saturday":
     console.log("It's saturday...Relax and Enjoy your weekend");
     break;
-  default:
-    console.log("invalid" + day + "is not a day");
+    default:
+      console.log("invalid" + day + "is not a day");
     break;
 }
 
@@ -43,25 +42,27 @@ switch (fruit) {
   case "cherries":
     alert("Cherries are N20 per one");
     break;
-  case "oranges":
+    case "oranges":
     alert("Oranges are N50 per one");
     break;
   case "mangoes":
   case "papayas":
     alert("Mangoes and Papayas are N100 per one");
     break;
-  default:
-    alert("We do not have this fruit in stock");
-}
-
-alert("Thank You for shopping with Us");
+    default:
+      alert("We do not have this fruit in stock");
+    }
+    
+    alert("Thank You for shopping with Us");
+    */
 
 /* 
 if (newAge < 18 || newAge > 60) {
-    alert(user + " you are not eligible to check your Grade");
-} else {
+  alert(user + " you are not eligible to check your Grade");
+  } else {
     alert("Welcome " + user + " you are eligible to check your Grade");
 }
+case "friday":
 */
 
 /* 
@@ -78,32 +79,46 @@ if (visitor_age < 18) {
 } */
 
 //GRADE CHECKER
-var student = document.getElementById("score");
-var student_score = parseInt(student);
+// Adding event listener for the button
+document.getElementById("checker").addEventListener("click", function () {
+  // Getting the value of the input when button is clicked
+  var student = document.getElementById("scoreee").value;
+  var student_score = parseInt(student);
 
-if (student_score >= 70 && student_score <= 100) {
-  document.getElementById("grad").innerHTML("You got an A, You are an Idolo");
-} else if (student_score < 70 && student_score >= 60) {
-  document.getElementById("grad").innerHTML("You got a B");
-} else if (student_score < 60 && student_score >= 50) {
-  document.getElementById("grad").innerHTML("You got a C");
-} else if (student_score < 50 && student_score >= 45) {
-  document.getElementById("grad").innerHTML("You got a D");
-} else if (student_score < 45 && student_score >= 40) {
-  document.getElementById("grad").innerHTML("You got a E");
-} else if (student_score < 40 && student_score >= 0) {
-  document.getElementById("grad").innerHTML("You got a F, You are an Odolo");
-} else {
-  document.getElementById("grad").innerHTML("Invalid Entry");
-}
+  const grade = document.getElementById("grad");
+
+  if (isNaN(student_score) || student_score < 0) {
+    grade.innerHTML = "Invalid Entry. Please enter a valid score.";
+  } else if (student_score >= 70 && student_score <= 100) {
+    grade.innerHTML =
+      "With your score of " + student_score + " you got an A, You are an Idolo";
+  } else if (student_score < 70 && student_score >= 60) {
+    grade.innerHTML = "With your score of " + student_score + " you got a B";
+  } else if (student_score < 60 && student_score >= 50) {
+    grade.innerHTML = "With your score of " + student_score + " you got a C";
+  } else if (student_score < 50 && student_score >= 45) {
+    grade.innerHTML = "With your score of " + student_score + " you got a D";
+  } else if (student_score < 45 && student_score >= 40) {
+    grade.innerHTML = "With your score of " + student_score + " you got an E";
+  } else if (student_score < 40 && student_score >= 0) {
+    grade.innerHTML =
+      "With your score of " + student_score + " you got an F, You are an Odolo";
+  }
+});
 
 //Submit Button
-/*
+
 const formBtn = document.querySelector("#form1");
-const scoreBtn = document.querySelector(".grade");
+const scoreBtn = document.querySelector("#checker");
 const closeBtn = document.querySelector(".grade .close-btn");
+const popup = document.getElementById("popup");
 
 scoreBtn.addEventListener("click", function () {
-    style.display = "block";
+  (popup.style.display = "block"),
+    (formBtn.style.display = "none"),
+    console.log(student_score);
 });
-*/
+
+closeBtn.addEventListener("click", function () {
+  (popup.style.display = "none"), (formBtn.style.display = "block");
+});
