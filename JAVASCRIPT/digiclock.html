@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock</title>
+  </head>
+  <body>
+    <h3>Know the time</h3>
+    <div class="clock">
+      <span id="hours">00</span><span>hrs</span> <span id="minutes">00</span
+      ><span>mins</span> <span id="seconds">00</span><span>secs</span>
+      <sup id="meridian"></sup>
+    </div>
+
+    <script>
+      var tym = new Date();
+      var hr = tym.getHours();
+      var mins = tym.getMinutes();
+      var secs = tym.getSeconds();
+
+      document.getElementById("hours").innerHTML = hr;
+      document.getElementById("minutes").innerHTML = mins;
+      document.getElementById("seconds").innerHTML = secs;
+      var meridian = document.getElementById("meridian");
+    </script>
+  </body>
+</html>

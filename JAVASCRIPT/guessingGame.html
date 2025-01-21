@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guessing Game</title>
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #000;
+      }
+
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(to right, #a72710, #380d03);
+        width: 400px;
+        padding: 20px;
+      }
+
+      .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h3>Guess a number between 1 and 50</h3>
+        <p>Enter a number below</p>
+        <input type="number" id="numberBox" onkeydown="enterKey(event)" />
+        <button id="EnterBtn">Enter</button>
+        <p id="resultText"></p>
+      </div>
+    </div>
+
+    <script>
+      let compNum = Math.ceil(Math.random() * 50);
+      let btn = document.getElementById("EnterBtn");
+      let resultText = document.getElementById("resultText");
+      console.log(compNum);
+
+
+      btn.addEventListener("click", function btnSub() {
+        let userNum = document.getElementById("numberBox").value;
+
+        if (userNum == compNum) {
+          resultText.innerHTML = "You guessed right!";
+        } else if (userNum < compNum) {
+          resultText.innerHTML = "Wrong, guess higher";
+        } else if (userNum > compNum) {
+          resultText.innerHTML = "Wrong, guess lower";
+        }
+      });
+
+      
+      function enterKey(event) {
+        if (event.key == "Enter") {
+          let userNum = document.getElementById("numberBox").value;
+
+          if (userNum == compNum) {
+            resultText.innerHTML = "You guessed right!";
+          } else if (userNum < compNum) {
+            resultText.innerHTML = "Wrong, guess higher";
+          } else if (userNum > compNum) {
+            resultText.innerHTML = "Wrong, guess lower";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
