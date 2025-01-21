@@ -4,25 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Digital Clock</title>
+    <style>
+      body {
+        background: #000;
+        color: #fff;
+        text-align: center;
+      }
+
+      .clock {
+        width: 90%;
+        margin: auto;
+        border: 1px dotted #fff;
+        font-size: 4.5rem;
+      }
+    </style>
   </head>
   <body>
     <h3>Know the time</h3>
     <div class="clock">
-      <span id="hours">00</span><span>hrs</span> <span id="minutes">00</span
-      ><span>mins</span> <span id="seconds">00</span><span>secs</span>
+      <span id="hours">00</span><small>hrs:</small> <span id="minutes">00</span
+      ><small>mins:</small> <span id="seconds">00</span><small>secs</small>
       <sup id="meridian"></sup>
     </div>
 
     <script>
-      var tym = new Date();
-      var hr = tym.getHours();
-      var mins = tym.getMinutes();
-      var secs = tym.getSeconds();
+      function clock() {
+        var tym = new Date();
+        var hr = tym.getHours();
+        var mins = tym.getMinutes();
+        var secs = tym.getSeconds();
 
-      document.getElementById("hours").innerHTML = hr;
-      document.getElementById("minutes").innerHTML = mins;
-      document.getElementById("seconds").innerHTML = secs;
-      var meridian = document.getElementById("meridian");
+        document.getElementById("hours").innerHTML = hr % 12;
+        document.getElementById("minutes").innerHTML = mins;
+        document.getElementById("seconds").innerHTML = secs;
+        var meridian = document.getElementById("meridian");
+
+        if (hr >= 12) {
+          meridian.innerHTML = "pm";
+        } else {
+          meridian.innerHTML = "am";
+        }
+      }
+
+      setInterval(clock);
     </script>
   </body>
 </html>
