@@ -6,43 +6,69 @@
     <title>Digital Clock</title>
     <style>
       body {
-        background: #000;
-        color: #fff;
+        background: linear-gradient(
+          to right,
+          rgba(0, 255, 255, 0.5),
+          rgba(0, 0, 255, 0.8)
+        );
+        background-size: cover;
+        font-family: cursive;
+        color: aliceblue;
         text-align: center;
+        overflow-x: hidden;
       }
 
       .clock {
         width: 90%;
         margin: auto;
         border: 1px dotted #fff;
-        font-size: 4.5rem;
+        font-size: 3rem;
+      }
+
+      span {
+        font-size: 4rem;
+        color: aliceblue;
       }
     </style>
   </head>
   <body>
-    <h3>Know the time</h3>
-    <div class="clock">
-      <span id="hours">00</span><small>hrs:</small> <span id="minutes">00</span
-      ><small>mins:</small> <span id="seconds">00</span><small>secs</small>
-      <sup id="meridian"></sup>
+    <div class="wrapper" id="end">
+      <h2>Countdown to Valentine</h2>
+      <div class="clock">
+        <span id="days">00</span><small>days:</small> <span id="hours">00</span
+        ><small>hrs:</small> <span id="minutes">00</span><small>mins:</small>
+        <span id="seconds">00</span><small>secs</small>
+      </div>
     </div>
 
     <script>
       function clock() {
         var tym = new Date();
+        var dayss = tym.getDate();
         var hr = tym.getHours();
         var mins = tym.getMinutes();
         var secs = tym.getSeconds();
+        var valDate = new Date(2025, 1, 14, 0, 0, 0, 0);
+        var valDateTym = valDate.getTime();
+        var currentTym = tym.getTime();
+        var timeLeft = valDateTym - currentTym;
 
-        document.getElementById("hours").innerHTML = hr % 12;
-        document.getElementById("minutes").innerHTML = mins;
-        document.getElementById("seconds").innerHTML = secs;
-        var meridian = document.getElementById("meridian");
+        document.getElementById("days").innerHTML = Math.floor(
+          timeLeft / (1000 * 60 * 60 * 24)
+        );
+        document.getElementById("hours").innerHTML = Math.floor(
+          (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        document.getElementById("minutes").innerHTML = Math.floor(
+          (timeLeft % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        document.getElementById("seconds").innerHTML = Math.floor(
+          (timeLeft % (1000 * 60)) / 1000
+        );
 
-        if (hr >= 12) {
-          meridian.innerHTML = "pm";
-        } else {
-          meridian.innerHTML = "am";
+        if (timeLeft <= 0) {
+          document.getElementById("end").innerHTML =
+            "<h2>Happy Valentine's Day! Enjoy the rest of the year</h2>";
         }
       }
 

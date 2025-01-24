@@ -132,3 +132,9 @@ var month = d.getMonth();
 document.write("<br>", months[month]);
 
 //
+var valDate = new Date(2025, 1, 14, 0, 0, 0, 0);
+
+document.write("<br>", valDate.getTime());
+
+var g = new Date(2025, 1, 14, 0, 0, 0, 0);
+var gt = g.getTime;
