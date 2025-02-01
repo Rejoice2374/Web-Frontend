@@ -6,28 +6,49 @@
     <title>Digital Clock</title>
     <style>
       body {
-        background: linear-gradient(
-          to right,
-          rgba(0, 255, 255, 0.5),
-          rgba(0, 0, 255, 0.8)
-        );
+        background: url(val3.jpg);
+
+        /* background: linear-gradient(
+            to right,
+            rgba(255, 0, 255, 0.5),
+            rgba(255, 0, 212, 0.8)
+          ); */
         background-size: cover;
+        background-repeat: no-repeat;
         font-family: cursive;
-        color: aliceblue;
-        text-align: center;
+        color: #000;
         overflow-x: hidden;
       }
 
-      .clock {
-        width: 90%;
-        margin: auto;
-        border: 1px dotted #fff;
-        font-size: 3rem;
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        /* gap: 60px; */
       }
 
-      span {
-        font-size: 4rem;
-        color: aliceblue;
+      .wrapper h2 {
+        font-size: 36px;
+        color: rgb(0, 42, 78);
+      }
+
+      .clock {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+      }
+
+      .text p {
+        font-size: 56px;
+        color: #dd1a92;
+      }
+
+      .text small {
+        font-size: 42px;
+        color: #79084d;
       }
     </style>
   </head>
@@ -35,9 +56,22 @@
     <div class="wrapper" id="end">
       <h2>Countdown to Valentine</h2>
       <div class="clock">
-        <span id="days">00</span><small>days:</small> <span id="hours">00</span
-        ><small>hrs:</small> <span id="minutes">00</span><small>mins:</small>
-        <span id="seconds">00</span><small>secs</small>
+        <div class="text">
+          <p id="days">00</p>
+          <small>days:</small>
+        </div>
+        <div class="text">
+          <p id="hours">00</p>
+          <small>hrs:</small>
+        </div>
+        <div class="text">
+          <p id="minutes">00</p>
+          <small>mins:</small>
+        </div>
+        <div class="text">
+          <p id="seconds">00</p>
+          <small>secs</small>
+        </div>
       </div>
     </div>
 

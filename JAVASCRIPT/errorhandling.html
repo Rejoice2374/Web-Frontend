@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Error - is an object that is created to represent a problem that occurs often with user's input
+      //try - encloses code that might potentially cause an error
+      //catch - handles any errors thrown from try{}
+      //finally = (this is optional) always execute.
+
+      try {
+        var firstName = "Akin";
+        var lastName = "Bello";
+        document.write("Hello world");
+        document.write("Hello " + firstName + " " + lastName);
+      } catch (error) {
+        document.write("<br> You got an error: " + error);
+      } finally {
+        document.write("<br> This will run error or no error");
+      }
+    </script>
+  </body>
+</html>

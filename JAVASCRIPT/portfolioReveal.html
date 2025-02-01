@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .tab-container {
+        display: flex;
+        margin: 20px;
+        gap: 20px;
+      }
+
+      .tab {
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .tab:hover {
+        text-decoration: underline;
+        text-decoration-style: double;
+        text-decoration-color: #00ff9b;
+      }
+
+      ul li {
+        list-style: none;
+        line-height: 2rem;
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active-tab-content {
+        display: block;
+      }
+
+      .tab.active-tab {
+        color: #00ff9b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tab-container">
+      <h2 class="tab active-tab" onclick="openTab('Skills')">Skills</h2>
+      <h2 class="tab" onclick="openTab('Experience')">Experience</h2>
+      <h2 class="tab" onclick="openTab('Education')">Education</h2>
+    </div>
+
+    <div class="tab-content" id="Skills">
+      <ul>
+        <li>Web Design</li>
+        <li>Graphic Design</li>
+        <li>Digital Marketing</li>
+        <li>Public Speaking</li>
+      </ul>
+    </div>
+    <div class="tab-content" id="Experience">
+      <ul>
+        <li>Intern at New Horizons</li>
+        <li>NYSC - Eleyele High School</li>
+        <li>Digital Marketer at Horizons enterprise</li>
+        <li>Teacher at Makinde Nur & Pry School</li>
+      </ul>
+    </div>
+    <div class="tab-content" id="Education">
+      <ul>
+        <li>MSc. Yale University</li>
+        <li>BSc. Havard University</li>
+        <li>SSCE Lead City High School</li>
+      </ul>
+    </div>
+  </body>
+
+  <script>
+    var tab = document.getElementsByClassName("tab");
+    var tabcontent = document.getElementsByClassName("tab-content");
+
+    function openTab(eachTab) {
+      for (a of tab) {
+        a.classList.remove("active-tab");
+      }
+
+      for (b of tabcontent) {
+        b.classList.remove("active-tab-content");
+      }
+      event.currentTarget.classList.add("active-tab");
+      document.getElementById(eachTab).classList.add("active-tab-content");
+    }
+  </script>
+</html>
