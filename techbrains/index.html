@@ -3,15 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/bs/css/bootstrap-grid.min.css" />
-    <link rel="stylesheet" href="/bs/css/bootstrap.min.css" />
-    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Techbrains</title>
   </head>
   <body>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-      <div class="container navContainer">
-        <a class="navbar-brand" href="#">TechBrain Institute</a>
+      <div class="container-sm">
+        <a class="navbar-brand" href="#"><b>TechBrains Institute</b></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -23,13 +27,13 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse navTT" id="collapsibleNavbar">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Instructor</a>
+              <a class="nav-link" href="#">Instructors</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -42,10 +46,18 @@
                 Courses
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Web Development</a></li>
                 <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item" href="#">Graphics and Multimedia</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Software Development</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Autocad/Revit</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">UI/UX</a>
                 </li>
               </ul>
             </li>
@@ -60,48 +72,62 @@
       </div>
     </nav>
 
-    <!-- Grid Container -->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h2>First Heading</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-            repellendus deserunt doloribus animi explicabo maxime, repudiandae
-            dolores sint ex nobis voluptatum ipsa laboriosam vel, itaque,
-            tempora totam iusto quasi repellat!
-          </p>
-        </div>
-
-        <div class="col-md-4">
-          <h2>Second Heading</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet
-            vitae aperiam impedit recusandae nam dolore voluptatibus,
-            perferendis accusantium id neque itaque maxime nulla veritatis
-            pariatur dicta ad consequuntur esse nesciunt.
-          </p>
-        </div>
-
-        <div class="col-md-4">
-          <h2>Third Heading</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo aut
-            asperiores ratione porro aspernatur, sed suscipit quae perspiciatis
-            explicabo sint ut magnam. Necessitatibus quae nemo consequuntur
-            iusto aut quisquam at.
-          </p>
+    <section class="bg-dark text-light text-center p-5 text-sm-start">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h1>
+              Learn the <span class="text-warning">21st Century Skills</span>
+            </h1>
+            <p class="lead my-4">
+              Increase your skills set. Join our upcoming bootcamp to get
+              trained on the latest and most sort after skills. Learn the latest
+              Web technologies, Graphic design/3D Animations, UI/UX, Python
+              Programming, Digital Marketing and lots more
+            </p>
+            <a
+              href="#"
+              class="btn btn-primary btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              >Enroll here</a
+            >
+          </div>
+          <div class="col-md-6">
+            <img src="t assets/hero.png" class="img-fluid" alt="hero" />
+          </div>
         </div>
       </div>
+    </section>
 
+    <section class="bg-primary p-5 text-light">
+      <div class="container-sm">
+        <h2 class="d-md-flex justify-content-between align-items-center">Sign Up For Our Newsletter</h2>
+        <div class="form-group">
+          <input type="email" name="email" class="form-control" placeholder="Enter Email">
+          <button class="btn btn-dark btn-md">Subscribe</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-sm">
       <div class="row mt-4">
         <div class="col-lg-3 col-md-6 xl-mt-4">
           <div class="card shadow text-center">
-            <img
-              src="images/testimonial-1.jpg"
-              class="card-img-top"
-              alt="..."
-            />
+            <i class="bi bi-laptop"></i>
+            <div class="card-body">
+              <h5 class="card-title">Virtual Class</h5>
+              <p class="card-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel cumque, consequatur sunt, quibusdam eaque earum voluptatibus odit at a assumenda nulla mollitia alias odio non culpa nostrum possimus facilis amet.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 xl-mt-4">
+          <div class="card shadow text-center">
+            
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">
@@ -115,47 +141,7 @@
 
         <div class="col-lg-3 col-md-6 xl-mt-4">
           <div class="card shadow text-center">
-            <img
-              src="images/testimonial-2.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 xl-mt-4">
-          <div class="card shadow text-center">
-            <img
-              src="images/testimonial-3.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 xl-mt-4">
-          <div class="card shadow text-center">
-            <img
-              src="images/testimonial-4.jpg"
-              class="card-img-top"
-              alt="..."
-            />
+            
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">
@@ -167,9 +153,69 @@
           </div>
         </div>
       </div>
-    </div>
+  </section> 
 
-    <script src="/bs/js/bootstrap.bundle.min.js"></script>
-    <script src="/bs/js/bootstrap.bundle.js"></script>
+
+    <!-- Enrollment Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title text-black fs-5 ms-auto" id="exampleModalLabel">Register Here</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <p class="text-black">
+                      Fill the form below, we would get in touch with you
+                    </p>
+                    <form action="">
+                      <div class="form-group">
+                        <label for="name" class="text-black">Name:</label>
+                        <input
+                          type="text"
+                          placeholder="Enter your name"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="email" class="text-black">Email:</label>
+                        <input
+                          type="email"
+                          placeholder="Enter Email"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="phone" class="text-black">Phone:</label>
+                        <input
+                          type="text"
+                          placeholder="Enter Phone Number"
+                          class="form-control"
+                        />
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
